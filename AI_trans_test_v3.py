@@ -13,7 +13,7 @@ def askGpt(prompt,apikey):
     client = openai.OpenAI(api_key = apikey)
 
     response = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gpt-4o",
     messages=[{"role": "user", "content": prompt}])
     gptResponse = response.choices[0].message.content
     return gptResponse    
